@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --raleway: 'Raleway', sans-serif, system-ui;
+  --primary-bg: #202731;
+  --clr-text: #94a3b8;
+  --clr-indigo: #6365ff;
+  --clr-slate800: #1e293b;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: var(--raleway);
+  color: var(--clr-text);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--clr-indigo);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 30rem;
+  height: 19rem;
+  background-color: var(--clr-slate800);
+  padding: 2rem 1rem 2rem 1rem;
+  box-shadow: rgba(76, 85, 94, 0.1) 0px 8px 15px;
+}
+
+.form h1 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 22rem;
+  margin: 0 auto;
+}
+
+.form__content input {
+  border: 1px solid var(--clr-indigo);
+  outline: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: var(--raleway);
+  letter-spacing: 0.1em;
+  border-radius: 0.4rem;
+  width: 100%;
+  background-color: transparent;
+  color: var(--clr-text);
+  cursor: not-allowed;
+}
+
+.form__content input::placeholder {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: var(--clr-text);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.8rem;
+
+  position: relative;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--raleway);
+  color: #f1f5f9;
+  background-color: var(--clr-indigo);
+  width: 48%;
+
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn svg {
+  height: 1.2rem;
+  margin-right: 0.2rem;
+  fill: #f1f5f9;
+}
+
+.tooltip {
+  border-radius: 0.3rem;
+  padding: 0.5em 0.8em;
+  font-size: 0.8rem;
+  background-color: rgb(55, 65, 81);
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+}
+
+.tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
